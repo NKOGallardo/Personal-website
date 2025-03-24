@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntobeko | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: cyan;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: cyan;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-size: 3em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        
+        .btn2 {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn2:hover {
+            background: white;
+            color: black;
+        }
+ 
+
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            background: #151515;
+            padding: 50px;
+        }
+        .Contantparagraph {
+            margin-bottom: 40px;
+        }
+        footer {
+            background: black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Ntobeko</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Hello, I'm Ntobeko</h1>
+        <p>A passionate coder and future tech innovator</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>I'm a high school student who loves coding and building websites. My dream is to work with cutting-edge technology, including drones and AI.</p>
+    </section>
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">Project 1</div>
+            <div class="project-card">Project 2</div>
+            <div class="project-card">Project 3</div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p class="Contantparagraph">Reach out for collaborations or just to say hi!</p>
+        <a href="mailto:NKOgalado@gmail.com" class="btn2">Email Me</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Ntobeko | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
