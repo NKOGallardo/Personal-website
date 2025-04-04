@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="Web-style.css">
+    <link class="icon" rel="icon" href="images/Profile.png">
     <title>Ntobeko | Portfolio</title>
 </head>
 <body>
@@ -14,6 +15,16 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div id="mobile-icon" onclick="toggleMobileMenu(this)">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <nav class="mobile">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
     <section class="hero">
         <h1>Hello, I'm Ntobeko</h1>
@@ -28,9 +39,24 @@
     <section class="section" id="projects">
         <h2>Projects</h2>
         <div class="projects">
-            <div class="project-card">Project 1</div>
-            <div class="project-card">Project 2</div>
-            <div class="project-card">Project 3</div>
+            <div class="project-card">
+                <p style=" padding-bottom: 10px;">Guess the number</p>
+                <a href="https://nkogallardo.github.io/The-game/">
+                <img class="p1" src="images/Guess the Number.png" alt="Screen shot">
+                </a>
+            </div>
+            <div class="project-card">
+                <p style=" padding-bottom: 10px;">A uncompite website</p>
+                <a>
+                <img class="p2" src="images/Ntobeko _ Portfolio.png" alt="Screen shot">
+                </a>
+            </div>
+            <div class="project-card">
+                <p style=" padding-bottom: 10px;">In progress</p>
+                <a>
+                    <img class="p3" src="images/Work in progress.png" alt="Downloud">
+                </a>
+            </div>
         </div>
     </section>
     <section class="contact" id="contact">
@@ -42,4 +68,5 @@
         <p>&copy; 2025 Ntobeko | All Rights Reserved</p>
     </footer>
 </body>
+<srcipt src="me.js"></srcipt>
 </html>
