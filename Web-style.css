@@ -1,9 +1,15 @@
-       
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
+        }
+
+        .icon {
+            width: 50px;
+            height: 100px;
+            border-radius: 50%;
         }
         
         body {
@@ -41,6 +47,66 @@
         .nav-links a:hover {
             color: cyan;
         }
+
+        /* mobile nav */
+
+        .open .mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .mobile {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            height: calc(100vh - 50px);
+            width:100%;
+        }
+
+        .mobile a {
+            margin-bottom: 10px;
+        }
+
+        #mobile-icon {
+            margin: auto 0;
+            display: none;
+            cursor: pointer;
+        }
+
+        #mobile-icon div {
+            width: 35px;
+            height: 3px;
+            background: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .open .line1 {
+            -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+
+        .open .line2 {
+            opacity: 0;
+        }
+
+        .open .line3 {
+            -webkit-transform: rotate(-45deg) translate(-6px, 8px);
+            transform: rotate(-45deg) translate(-6px, 8px);
+        }
+
+        @media only screen and (max-width: 590px){
+            header nav {
+                display: none;
+            }
+
+            #mobile-icon {
+                display: block;
+            }
+        }
         
         .hero {
             height: 100vh;
@@ -69,7 +135,7 @@
             font-weight: 600;
         }
         
-        .btn {
+        .btn, .btn2 {
             margin-top: 20px;
             padding: 10px 20px;
             background: cyan;
@@ -79,24 +145,7 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        
-        .btn:hover {
-            background: white;
-            color: black;
-        }
-
-        
-        .btn2 {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: cyan;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn2:hover {
+        .btn:hover, .btn2:hover {
             background: white;
             color: black;
         }
@@ -126,6 +175,21 @@
             transform: scale(1.05);
         }
         
+        .p1 {
+            height: 150px;
+            width: 250px;
+        }
+
+        .p2 {
+            height: 150px;
+            width: 250px;
+        }
+
+        .p3 {
+            height: 150px;
+            width: 180px;
+        }
+
         .contact {
             background: #151515;
             padding: 50px;
