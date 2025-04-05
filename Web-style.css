@@ -54,6 +54,12 @@
         }
 
         @media only screen and (max-width: 546px) {
+            .NKO {
+                width: 270px;
+                height: 200px;
+                margin: 20px;
+            }
+
             .NKO:hover {
                 filter: grayscale(0);
                 transition: 2s;
