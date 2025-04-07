@@ -29,7 +29,7 @@
         }
 
         #mobile-tap {
-            margin-left: 140px;
+            margin-left: 110px;
             display: none;
         }
 
@@ -51,6 +51,7 @@
             transition: 2s;
             margin-right: 80px;
             border-radius: 20%;
+            margin-left: 20px;
         }
 
         @media only screen and (max-width: 546px) {
@@ -58,6 +59,7 @@
                 width: 270px;
                 height: 200px;
                 margin: 20px;
+                margin-right: 0px;
             }
 
             .NKO:hover {
@@ -271,4 +273,45 @@
             padding: 20px;
             text-align: center;
         }
-        
+
+        /* Socails */
+
+        .socailsBox {
+            margin-left: 37%;
+        }
+
+        button {
+            background: black;
+            padding: 18px; 
+            font-size: 17px;
+            font-weight: 600; 
+            text-decoration: none;
+            border: 1px solid cyan;
+            border-radius: 25px;
+            color: white;
+            text-align: center;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+  
+        button span {
+            margin: 10px;
+            row-gap: 2;
+        }
+  
+        button:hover {
+            color: #fff;
+            border: 1px solid cyan;
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 546px) {
+            button {
+                margin-bottom: 10px;
+            }
+
+            .socailsBox {
+                margin-left: 10px;
+            }
+        }
+  
