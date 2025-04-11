@@ -22,6 +22,16 @@
             border-radius: 20px;
         }
 
+        .PDF {
+            width: 15px;
+            height: 20px;
+            color: cyan;
+            background-color: black;
+            border: 1px white solid;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
         .about p {
             text-align: left;
         }
