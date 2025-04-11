@@ -16,8 +16,10 @@
 
         .section1 {
             padding: 100px 20px;
-            margin-right: 50px;
+            margin: 0;
             text-align: left;
+            background-color: #151515;
+            border-radius: 20px;
         }
 
         .about p {
