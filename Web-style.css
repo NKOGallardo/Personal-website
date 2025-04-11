@@ -20,6 +20,7 @@
             text-align: left;
             background-color: #151515;
             border-radius: 20px;
+            display: block;
         }
 
         .PDF {
@@ -41,7 +42,7 @@
         }
 
         #mobile-tap {
-            margin-left: 110px;
+            margin-left: 140px;
             display: none;
         }
 
@@ -71,7 +72,7 @@
                 width: 270px;
                 height: 200px;
                 margin: 20px;
-                margin-right: 0px;
+                margin-left: 40px;
             }
 
             .NKO:hover {
@@ -114,6 +115,10 @@
             color: cyan;
         }
         
+        .nav-links {
+            margin-right: 10px;
+        }
+
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -181,6 +186,13 @@
             }
 
             #mobile-icon {
+                display: block;
+                margin-right: 28px;
+            }
+        }
+
+        @media only screen and (max-width:840px) {
+            .section1 {
                 display: block;
             }
         }
