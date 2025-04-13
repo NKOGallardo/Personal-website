@@ -14,10 +14,18 @@
             font-family: 'Arial', sans-serif;
         }
 
-        .img {
+        .img1 {
             width: 500px;
             height: 330px;
-            padding: 20px 200px; 
+            padding: 20px 200px;
+            padding-top: 100px; 
+        }
+
+        .img2 {
+            width: 500px;
+            height: 330px;
+            padding: 20px 200px;
+            padding-top: 10px; 
         }
 
         .section1 {
