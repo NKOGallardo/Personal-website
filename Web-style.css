@@ -408,8 +408,8 @@
     width: 100%;
     margin-top: 15px;
     padding: 10px;
-    background-color: #ff69b4;
-    color: white;
+    background-color: #000;
+    color: cyan;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -417,6 +417,6 @@
   }
   
   .form-container button:hover {
-    background-color: #e055a1;
+    background-color: #121212;
   }
   
