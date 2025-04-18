@@ -6,7 +6,16 @@
     <link rel="Stylesheet" href="Web-style.css">
     <link class="icon" rel="icon" href="images/Profile.png">
     <title>Ntobeko | Portfolio</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "n-BR5zRe7GSes6D_l",
+      });
+   })();
+</script>
 </head>
 <body>
     <header>
@@ -41,7 +50,7 @@
             <br>
           
             <label for="email">Email</label>
-            <input type="email" id="email" name="Email" placeholder="*****@gmail.com" required>
+            <input type="email" id="Email" name="Email" placeholder="*****@gmail.com" required>
 
             <br>
             <br>
@@ -61,11 +70,12 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Type something to Ntobeko" required></textarea>
           
-            <button type="submit" style="margin-bottom: 50px;" onclick="sendform()">Send</button>
+            <button type="submit" style="margin-bottom: 50px;" onclick="sendEmail()">Send</button>
             <a class="btn2" href="my web.html" style=" margin-top: 100px;">Back</a>
           </form>
           
     </main>
+    <script src="me.js"></script>
     </body>
 </body>
 </html>    
