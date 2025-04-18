@@ -6,6 +6,7 @@
     <link rel="Stylesheet" href="Web-style.css">
     <link class="icon" rel="icon" href="images/Profile.png">
     <title>Ntobeko | Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
     </header>
     <body style="color: black; text-align: start;">
     <main>
-        <form action="https://formsubmit.co/NKOGallardo@email.com" method="POST" class="form-container">
+        <form action="https://api.emailjs.com/api/v1.0/NKOGalado@gmail.com/send"  id="contact-form" class="form-container">
             <h2>Contact Me</h2>
 
             <input type="hidden" name="_subject" value="New Email 💼">
@@ -60,7 +61,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Type something to Ntobeko" required></textarea>
           
-            <button type="submit" style="margin-bottom: 50px;">Send</button>
+            <button type="submit" style="margin-bottom: 50px;" onclick="sendform()">Send</button>
             <a class="btn2" href="my web.html" style=" margin-top: 100px;">Back</a>
           </form>
           
