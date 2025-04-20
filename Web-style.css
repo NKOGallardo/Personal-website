@@ -38,6 +38,7 @@
         }
 
         .Cir {
+            text-decoration: none;
             width: 15px;
             height: 20px;
             color: cyan;
@@ -331,6 +332,10 @@
             text-align: center;
         }
 
+        .NAME {
+            text-decoration: none;
+        }
+
         /* Socails */
 
         .socailsBox {
@@ -338,6 +343,7 @@
         }
 
         button {
+            text-decoration: none;
             background: black;
             padding: 18px; 
             font-size: 17px;
