@@ -68,8 +68,8 @@
             filter: grayscale(5);
             transition: 4s;
             left: 10;
-            width: 370px;
-            height: 300px;
+            width: 380px;
+            height: 475px;
             border-radius: 50%;
             float: left;
             margin-right: 30px;
@@ -94,6 +94,10 @@
                 padding-top: 100px; 
             }
 
+            button {
+                margin-top: 10px;
+            }
+
             .img2 {
                 width: 330px;
                 height: 230px;
@@ -103,8 +107,8 @@
             }
 
             .NKO {
-                width: 270px;
-                height: 200px;
+                width: 280px;
+                height: 360px;
                 margin: 20px;
                 margin-left: 40px;
             }
@@ -312,11 +316,6 @@
             width: 250px;
         }
 
-        .p3 {
-            height: 150px;
-            width: 180px;
-        }
-
         .contact {
             background: #151515;
             padding: 50px;
@@ -355,6 +354,7 @@
             text-align: center;
             margin-left: 2px;
             margin-right: 2px;
+            margin-top: 10px;
         }
   
         button span {
