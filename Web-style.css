@@ -37,6 +37,10 @@
             display: block;
         }
 
+        li {
+            list-style-type: none;
+        }
+
         .Cir {
             text-decoration: none;
             width: 15px;
