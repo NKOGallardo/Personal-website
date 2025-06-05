@@ -238,7 +238,7 @@ section li {
     margin-right: 10px;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 400px) {
     header {
         padding: 10px 15px;
     }
