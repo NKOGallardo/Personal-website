@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="Web-style.css">
     <link class="icon" rel="icon" href="images/Profile.png">
     <title>My Certificate</title>
 </head>
@@ -16,10 +15,10 @@
 <main>
     <section>
         <h1> Tap on the certificate's to download</h1>
-        <a  href="images/HTML.png" download>
+        <a class="c" href="images/HTML.png" download>
             <img class="img1" src="images/HTML.png" alt="HTML">
         </a>
-        <a href="images/CSS.png" download>
+        <a class="c" href="images/CSS.png" download>
             <img class="img2" src="images/CSS.png" alt="CSS">
         </a>
     </section>
@@ -128,6 +127,15 @@ main {
   #mobile-icon {
     display: flex;
   }
+}
+
+@media (min-width: 300px) {
+  
+    .c {
+        width: 300px;
+        margin: 20px;
+    }
+
 }
 
 </style>
