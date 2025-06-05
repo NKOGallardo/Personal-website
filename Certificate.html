@@ -5,35 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="Web-style.css">
     <link class="icon" rel="icon" href="images/Profile.png">
-    <title>Ntobeko | Portfolio</title>
+    <title>My Certificate</title>
 </head>
-<header>
-    <div class="logo">NKO_Gallardo</div>
-    <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div id="mobile-icon" onclick="toggleMobileMenu(this)">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-        <nav class="mobile">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+ <header>
+        <div class="logo">NKO_Gallardo</div>
+        <nav class="nav-links">      
+                <a href="my web.html">back</a>
         </nav>
-    </div>
-</header>
+    </header>
 <main>
-    <section style="padding-top: 20px;">
-        <h1 style="padding-top: 50px;"> Tap on the certificate's to download</h1>
+    <section>
+        <h1> Tap on the certificate's to download</h1>
         <a  href="images/HTML.png" download>
             <img class="img1" src="images/HTML.png" alt="HTML">
         </a>
         <a href="images/CSS.png" download>
-            <img class="img2" src="images/CSS.png" alt="HTML">
+            <img class="img2" src="images/CSS.png" alt="CSS">
         </a>
     </section>
 </main>
+</body>
+<style>
+    /* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #262626;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+/* Mobile Menu */
+#mobile-icon {
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+#mobile-icon .line1,
+#mobile-icon .line2,
+#mobile-icon .line3 {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#mobile-icon .mobile {
+    display: block;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#mobile-icon.active .mobile {
+    display: flex;
+}
+
+/* Certificates */
+main {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.img1,
+.img2 {
+  width: 300px;
+  margin: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: block;
+  }
+
+  #mobile-icon {
+    display: flex;
+  }
+}
+
+</style>
 </html>
