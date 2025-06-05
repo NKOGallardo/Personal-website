@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="Web-style.css">
-    <link class="icon" rel="icon" href="images/Profile.png">
+    <link rel="stylesheet" href="Web-style.css">
+    <link class="icon" rel="icon" href="ME/images/Profile.png">
     <title>Ntobeko | Portfolio</title>
 </head>
 <body>
@@ -20,22 +20,56 @@
             <div class="line2"></div>
             <div class="line3"></div>
             <nav class="mobile">
+                <a href="#Skill">Skills</a>
+                <a href="#Achievements">Achievements</a>
+                <a href="#Believe">Believe</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
+                <a href="Certificate.html">Certificates</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
   <main>  
-    <section class="hero">
+
+    <section id="main" class="hero">
         <h1>Hello, I'm Ntobeko</h1>
         <p>A passionate coder and future tech innovator</p>
         <a href="#projects" class="btn">View My Work</a>
+    </section id="Skill" class="section1">
+        <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <p>HTML</p>
+        <div class="bar"><div class="progress" style="width: 100%;"></div></div>
+            <p>CSS</p>
+        <div class="bar"><div class="progress" style="width: 95%;"></div></div>
+            <p>JavaScript</p>
+        <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+            <p>Python</p>
+        <div class="bar"><div class="progress" style="width: 20%;"></div></div>
+        </div>
     </section>
+    <section id="Achievements">
+       <h2>Achievements</h2>
+       <ul>
+           <li>🏆 Gauteng Sports Award Winner (2024)</li>
+           <li>📜 Built 10+ personal projects with JavaScript</li>
+           <li>💻 Only web developer at my school (self-taught)</li>
+           <li>🏉 Rugby player and student leader (RCL)</li>
+        </ul>
+    </section>
+    <section id="Believe" class="testimonial">
+        <h2>What I Believe</h2>
+        <blockquote>
+            "Every line of code I write is a step closer to my dream—changing the world through technology." – Ntobeko Mhlungu
+        </blockquote>
+    </section>
+
+
     <section class="section1" id="about">
         <div>
             <h3 id="desktop">Hover me</h3>
-            <h3 id="mobile-tap">Tap me</h3>
             <img class="NKO" src="images/NKO.jpg" alt="A person">
         </div>
         <div>
@@ -125,11 +159,11 @@
         <h2>Contact Me</h2>
         <p>Reach out for collaborations or just to say hi!</p>
         <p class="Contantparagraph">Or if you want lession about coding</p>
-        <a href="mailto:NKOgalado@gmail.com" class="btn2">Email Me</a>
+        <a href="mailto:NKOgalado@gmail.com" style="color:red;" tect>Email Me</a>
     </section>
     <footer>
         <p>&copy; 2025 Ntobeko | All Rights Reserved</p>
     </footer>
 </body>
-<srcipt src="me.js"></srcipt>
+<script src="me.js"></script>
 </html>
