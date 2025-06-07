@@ -1,4 +1,4 @@
-    /* Web-style.css */
+/* Web-style.css */
 
 /* Reset and Base */
 * {
@@ -13,6 +13,7 @@ body {
     background: #0f172a;
     color: #f1f5f9;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 a {
@@ -238,7 +239,8 @@ section li {
     margin-right: 10px;
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 395px) {
     header {
         padding: 10px 15px;
     }
@@ -265,12 +267,17 @@ section li {
     }
 
     .NKO {
-        width: 180px;
-        height: 260px;
+        width: 100%;
+        max-width: 180px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 0px;
     }
 
     .project-card {
-        width: 100%;
+        width: 95vw;
+        max-width: 300px;
     }
 
     .contact {
@@ -323,8 +330,8 @@ section li {
     }
     .NKO {
         width: 240px;
-        height: 320px;
-        margin: 20px;
+        height: 300px;
+        margin: 0px;
         margin-left: 0px;
         margin-right: 0px;
     }
