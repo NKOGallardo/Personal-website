@@ -21,6 +21,18 @@ a {
     text-decoration: none;
 }
 
+/* Fade-in animation for header and hero */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Slide-up animation for project cards */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
 /* Header */
 header {
     display: flex;
@@ -29,8 +41,15 @@ header {
     padding: 20px 40px;
     background: #1e293b;
     position: sticky;
-    top: 0;
+    top: 20px; /* Add space from the top */
     z-index: 1000;
+    border-radius: 32px; /* Rounded corners */
+    box-shadow: 0 0px 32px 0 rgba(56,189,248,0.18), 0 2px 8px 0 rgba(30,41,59,0.18); /* Stronger shadow */
+    margin: 20px auto; /* Center and add vertical space */
+    width: calc(100% - 40px); /* Prevent edge-to-edge stretch */
+    max-width: 1100px; /* Optional: limit width for a true island look */
+    transition: box-shadow 0.3s;
+    animation: fadeIn 1s ease;
 }
 
 .logo {
@@ -88,6 +107,7 @@ header {
     text-align: center;
     padding: 100px 20px 60px;
     background: linear-gradient(to right, #0f172a, #1e293b);
+    animation: fadeIn 1.2s ease;
 }
 
 .hero h1 {
@@ -107,11 +127,13 @@ header {
     color: #0f172a;
     font-weight: bold;
     border-radius: 30px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .hero .btn:hover {
     background: #0ea5e9;
+    color: #0f172a;
+    transform: scale(1.07);
 }
 
 /* Sections */
@@ -170,36 +192,38 @@ section li {
     align-items: center;
     justify-content: center;
     text-align: left;
+    animation: fadeIn 1.5s ease;
 }
 
-        .NKO {
-            filter: grayscale(5);
-            transition: 4s;
-            left: 10;
-            width: 380px;
-            height: 475px;
-            border-radius: 50%;
-            float: left;
-            margin-right: 30px;
-            border-bottom: 100px;
-            animation-name: NKO 5s;
-        }
+.NKO {
+    filter: grayscale(5);
+    transition: 4s;
+    left: 10;
+    width: 380px;
+    height: 475px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+    border-bottom: 100px;
+    animation-name: NKO 5s;
+}
 
-        .NKO:hover {
-            filter: grayscale(0);
-            transition: 2s;
-            margin-right: 80px;
-            border-radius: 20%;
-            margin-left: 20px;
-        }
-        #desktop {
-            margin-left: 140px;
-        }
+.NKO:hover {
+    filter: grayscale(0);
+    transition: 2s;
+    margin-right: 80px;
+    border-radius: 20%;
+    margin-left: 20px;
+}
 
-        #mobile-tap {
-            margin-left: 140px;
-            display: none;
-        }
+#desktop {
+    margin-left: 140px;
+}
+
+#mobile-tap {
+    margin-left: 140px;
+    display: none;
+}
 
 
 .about p {
@@ -267,12 +291,19 @@ section li {
     }
 
     .NKO {
-        width: 100%;
-        max-width: 180px;
-        height: 50px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 0px;
+        width: 280px;
+        height: 360px;
+        margin: 20px;
+        margin-left: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .NKO:hover {
+        filter: grayscale(0);
+        transition: 2s;
+        margin-bottom: 80px;
+        border-radius: 20%;
     }
 
     .project-card {
@@ -303,6 +334,15 @@ section li {
         font-size: 0.9rem;
         padding: 15px 5px;
     }
+
+    #desktop {
+        display: none;
+    }
+
+    #mobile-tap {
+        display: block;
+        margin: 0px;
+    }
 }
 
 
@@ -329,25 +369,33 @@ section li {
         font-size: 1rem;
     }
     .NKO {
-        width: 240px;
-        height: 300px;
-        margin: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
+    filter: grayscale(5);
+    transition: all 0.3s ease;
+    left: 10;
+    width: 240px;
+    height: 300px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 50%;
+    float: left;
+    border-bottom: 100px;
+    animation: NKO 5s;
     }
 
-    .NKO:hover {
-        filter: grayscale(0);
-        transition: 2s;
-        margin-bottom: 80px;
-        margin-left: 0px;
-        margin-right: 0px;
-        border-radius: 20%;
+   .NKO:active {
+  filter: grayscale(0);
+    border-radius: 0px;
     }
-    #desktop {
+
+     #desktop {
         display: none;
     }
-    
+
+    #mobile-tap {
+        display: block;
+        margin: 0px;
+    }
 }
  
 
@@ -366,6 +414,7 @@ section li {
             border-radius: 10px;
             width: 300px;
             transition: 0.3s;
+            animation: slideUp 0.8s cubic-bezier(.23,1.01,.32,1) both;
         }
         
         .project-card:hover {
