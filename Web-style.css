@@ -44,7 +44,6 @@ header {
     top: 20px; /* Add space from the top */
     z-index: 1000;
     border-radius: 32px; /* Rounded corners */
-    box-shadow: 0 0px 32px 0 rgba(56,189,248,0.18), 0 2px 8px 0 rgba(30,41,59,0.18); /* Stronger shadow */
     margin: 20px auto; /* Center and add vertical space */
     width: calc(100% - 40px); /* Prevent edge-to-edge stretch */
     max-width: 1100px; /* Optional: limit width for a true island look */
