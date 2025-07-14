@@ -33,13 +33,18 @@ a {
     to { opacity: 1; transform: translateY(0);}
 }
 
+section {
+    border: 1px solid #334155; /* Subtle border for separation */
+}
+
 /* Header */
 header {
+    border: 1px solid #334155; /* Subtle border for separation */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: #1e293b;
+    background: linear-gradient(to right, #0f172a, #1e293b);
     position: sticky;
     top: 20px; /* Add space from the top */
     z-index: 1000;
@@ -47,8 +52,7 @@ header {
     margin: 20px auto; /* Center and add vertical space */
     width: calc(100% - 40px); /* Prevent edge-to-edge stretch */
     max-width: 1100px; /* Optional: limit width for a true island look */
-    transition: box-shadow 0.3s;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 1.5s ease;
 }
 
 .logo {
