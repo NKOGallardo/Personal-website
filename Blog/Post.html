@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog - Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #111;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: none; /* hidden by default */
+    }
+    .post-card.show {
+      display: block; /* revealed when needed */
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 1rem;
+    }
+
+    .post-content h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .author {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: #666;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Load More Button */
+    .load-more {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
+      background: #f1f1f1;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #333;
+      transition: background 0.2s;
+    }
+    .load-more:hover {
+      background: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Blog</h1>
+    <div class="grid">
+      <!-- Post Cards -->
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?coding" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>Simplifying JavaScript Inheritance</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 3 min read • 👀 593 views</div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?developer" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>Busting Common Coding Myths</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 2 min read • 👀 1.0K views</div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?technology" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>Boost Your Productivity with Version Control</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 4 min read • 👀 744 views</div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?web,design" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>Simplifying Next.js Middleware</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 3 min read • 👀 325 views</div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?react,js" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>How React Works Behind the Scenes</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 5 min read • 👀 1.1K views</div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?server,code" alt="Post Thumbnail">
+        <div class="post-content">
+          <h2>Client Side vs Server Side Rendering</h2>
+          <div class="author">By My Name</div>
+          <div class="meta">📖 6 min read • 👀 985 views</div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Load More Button -->
+    <button class="load-more">Load more ⬇</button>
+  </div>
+
+  <script>
+    const posts = document.querySelectorAll('.post-card');
+    const loadMoreBtn = document.querySelector('.load-more');
+    let currentIndex = 0;
+    const itemsPerClick = 3; // how many posts to show per click
+
+    function showMorePosts() {
+      for (let i = currentIndex; i < currentIndex + itemsPerClick && i < posts.length; i++) {
+        posts[i].classList.add('show');
+      }
+      currentIndex += itemsPerClick;
+
+      if (currentIndex >= posts.length) {
+        loadMoreBtn.style.display = 'none'; // hide button when all posts are shown
+      }
+    }
+
+    // show initial posts
+    showMorePosts();
+
+    loadMoreBtn.addEventListener('click', showMorePosts);
+  </script>
+</body>
+</html>
