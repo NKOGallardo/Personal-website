@@ -4,189 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Blog Post</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", Arial, sans-serif;
-    }
+  <link href="Blog.css" rel="stylesheet">
 
-    body {
-      background: #fafafa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Loading Screen */
-    #loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
-
-    #loading-screen.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    #loading-screen .spinner {
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #0a66c2;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Navbar */
-    nav {
-      background: white;
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav .logo {
-      font-weight: bold;
-      font-size: 1.3rem;
-      color: #0a66c2;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #0a66c2;
-    }
-
-    /* Layout */
-    .container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
-      padding: 2rem 5%;
-    }
-
-    /* Blog Post */
-    .blog-post {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .blog-post h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .blog-post .meta {
-      color: gray;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .blog-img {
-      width: 20px;
-      height: 70px;
-      margin: 1rem 0;
-    }
-
-    .blog-post h2 {
-      margin: 1.5rem 0 0.8rem;
-    }
-
-    .blog-post p {
-      margin-bottom: 1rem;
-    }
-
-    .blog-post code {
-      background: #f4f4f4;
-      padding: 0.2rem 0.4rem;
-      border-radius: 5px;
-    }
-
-    .blog-post pre {
-      background: #1e1e1e;
-      color: #f4f4f4;
-      padding: 1rem;
-      border-radius: 10px;
-      overflow-x: auto;
-      margin: 1rem 0;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      height: fit-content;
-      position: sticky;
-      top: 90px;
-    }
-
-    .sidebar img {
-      width: 80px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    .sidebar h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .sidebar p {
-      font-size: 0.9rem;
-      color: gray;
-      margin-bottom: 1rem;
-    }
-
-    .sidebar a {
-      display: block;
-      margin: 0.3rem 0;
-      text-decoration: none;
-      color: #0a66c2;
-      font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f0f0f0;
-      margin-top: 2rem;
-    }
-  </style>
 </head>
 <body>
   <!-- Loading Screen -->
@@ -195,14 +14,13 @@
   </div>
 
   <!-- Navbar -->
-  <nav>
-    <div class="logo">MyBlog</div>
-    <ul>
-      <li><a href="my web.html">Home</a></li>
-      <li><a href="Post.html">Posts</a></li>
-      <li><a href="my web.html">About</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="https://nkogallardo.github.io/Personal-website/my%20web.html">About</a></li>
+    <li><a href="Post.html">Post</a></li>
+  </ul>
+</nav>
+
 
   <!-- Content -->
   <div class="container">
@@ -210,20 +28,21 @@
     <div class="blog-post">
       <h1>Why I Love Coding</h1>
       <div class="meta">Published on August 29, 2025 • 5 min read</div>
-      <img src="images/Sreenshot (6).png" alt="Blog cover">
+      <img src="Love.jpeg" alt="Blog cover">
 
       <p>Coding is more than just writing instructions for a computer — it's a way of thinking, solving problems, and building things that matter. I started coding as a hobby, and it quickly turned into my passion.</p>
 
       <h2>My Journey</h2>
       <p>It all began when I watched a simple YouTube tutorial on HTML and CSS. Within hours, I had built my first website. That thrill of creating something from scratch kept me hooked.</p>
 
-      <pre><code>
-// Example JavaScript snippet
-function greet(name) {
+      <pre>
+<p style="color: darkgreen;">// A simple JavaScript function</p>
+<code style="color: cyan;">
+  function greet(name) {
   return `Hello, ${name}!`;
 }
-console.log(greet("World"));
-      </code></pre>
+console.log(greet('World'));
+</code><p style="color: darkgreen;">// Output: Hello, World!</p></pre>
 
       <h2>Why You Should Try Coding</h2>
       <ul>
@@ -237,7 +56,7 @@ console.log(greet("World"));
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <img class="blog-img" src="images/NKO Gallardo.jpg" alt="Author">
+      <img class="blog-img" src="NKO Gallardo.jpg" alt="Author">
       <h3>About Me</h3>
       <p>Hi, I’m Ntobeko — a developer, rugby player, and coffee lover. I build websites and write about coding, life, and technology.</p>
       <h4>Follow Me</h4>
