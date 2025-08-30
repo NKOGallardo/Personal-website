@@ -4,183 +4,232 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Blog - Home</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fafafa;
-      color: #111;
-      line-height: 1.5;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .post-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: none; /* hidden by default */
-    }
-    .post-card.show {
-      display: block; /* revealed when needed */
-    }
-    .post-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    .post-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .post-content {
-      padding: 1rem;
-    }
-
-    .post-content h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .author {
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 0.5rem;
-    }
-
-    .meta {
-      font-size: 0.8rem;
-      color: #666;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    /* Load More Button */
-    .load-more {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto;
-      padding: 0.8rem 2rem;
-      background: #f1f1f1;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 1rem;
-      color: #333;
-      transition: background 0.2s;
-    }
-    .load-more:hover {
-      background: #e0e0e0;
-    }
-  </style>
+  <link rel="stylesheet" href="Post.css">
 </head>
 <body>
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scroll-indicator"></div>
+
+ 
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">NKO Blog</div>
+    <ul>
+      <li><a href="Blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="floating-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">
+      ↑
+    </div>
+  </div>
+
   <div class="container">
-    <h1>My Blog</h1>
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Welcome to My Blog</h1>
+      <p class="hero-subtitle">Exploring code, creativity, and the digital world</p>
+    </div>
+
+
+    <!-- 
+      😊Beginner Friendly
+      😐Avarage
+      🤨Hard
+    -->
+    <!-- Blog Grid -->
     <div class="grid">
       <!-- Post Cards -->
-      <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?coding" alt="Post Thumbnail">
-        <div class="post-content">
-          <h2>Simplifying JavaScript Inheritance</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 3 min read • 👀 593 views</div>
-        </div>
-      </article>
+      <a href="">
+        <article class="post-card">
+          <img src="start.jpeg" alt="JavaScript Inheritance">
+          <div class="post-content">
+            <h2>How to get started</h2>
+            <div class="author">By Ntobeko Gallardo</div>
+            <div class="meta">
+              <span>📖 3 min read</span>
+              <span>😊Beginner Friendly </span>
+            </div>
+          </div>
+          <div class="post-card-preview">
+            <p>Dive deep into JavaScript's prototype chain and modern class syntax...</p>
+          </div>
+        </article>
+      </a>
 
       <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?developer" alt="Post Thumbnail">
+        <img src="https://source.unsplash.com/600x400/?developer,myths" alt="Coding Myths">
         <div class="post-content">
           <h2>Busting Common Coding Myths</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 2 min read • 👀 1.0K views</div>
+          <div class="author">By Ntobeko Gallardo</div>
+          <div class="meta">
+            <span>📖 2 min read</span>
+            <span>👀 1.0K views</span>
+          </div>
+        </div>
+        <div class="post-card-preview">
+          <p>Let's debunk the most persistent myths about programming and development...</p>
         </div>
       </article>
 
       <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?technology" alt="Post Thumbnail">
+        <img src="https://source.unsplash.com/600x400/?git,version,control" alt="Version Control">
         <div class="post-content">
           <h2>Boost Your Productivity with Version Control</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 4 min read • 👀 744 views</div>
+          <div class="author">By Ntobeko Gallardo</div>
+          <div class="meta">
+            <span>📖 4 min read</span>
+            <span>👀 744 views</span>
+          </div>
+        </div>
+        <div class="post-card-preview">
+          <p>Master Git workflows and collaboration techniques that every developer needs...</p>
         </div>
       </article>
 
       <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?web,design" alt="Post Thumbnail">
+        <img src="https://source.unsplash.com/600x400/?nextjs,web,framework" alt="Next.js Middleware">
         <div class="post-content">
           <h2>Simplifying Next.js Middleware</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 3 min read • 👀 325 views</div>
+          <div class="author">By Ntobeko Gallardo</div>
+          <div class="meta">
+            <span>📖 3 min read</span>
+            <span>👀 325 views</span>
+          </div>
+        </div>
+        <div class="post-card-preview">
+          <p>Learn how to implement powerful middleware patterns in your Next.js apps...</p>
         </div>
       </article>
 
       <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?react,js" alt="Post Thumbnail">
+        <img src="https://source.unsplash.com/600x400/?react,components" alt="React Internals">
         <div class="post-content">
           <h2>How React Works Behind the Scenes</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 5 min read • 👀 1.1K views</div>
+          <div class="author">By Ntobeko Gallardo</div>
+          <div class="meta">
+            <span>📖 5 min read</span>
+            <span>👀 1.1K views</span>
+          </div>
+        </div>
+        <div class="post-card-preview">
+          <p>Explore React's virtual DOM, reconciliation, and fiber architecture...</p>
         </div>
       </article>
 
       <article class="post-card">
-        <img src="https://source.unsplash.com/600x400/?server,code" alt="Post Thumbnail">
+        <img src="https://source.unsplash.com/600x400/?server,client,rendering" alt="Rendering Strategies">
         <div class="post-content">
           <h2>Client Side vs Server Side Rendering</h2>
-          <div class="author">By My Name</div>
-          <div class="meta">📖 6 min read • 👀 985 views</div>
+          <div class="author">By Ntobeko Gallardo</div>
+          <div class="meta">
+            <span>📖 6 min read</span>
+            <span>👀 985 views</span>
+          </div>
+        </div>
+        <div class="post-card-preview">
+          <p>Compare rendering strategies and choose the right approach for your project...</p>
         </div>
       </article>
     </div>
 
-    <!-- Load More Button -->
-    <button class="load-more">Load more ⬇</button>
-  </div>
+  <!--  Load More Button 
+    <button class="load-more">✨ Load More Posts</button>
+  </div>  -->
+
+  <!-- Footer -->
+  <footer>
+    © 2025 NKO Blog. Built with passion, creativity, and lots of coffee ☕
+  </footer>
 
   <script>
     const posts = document.querySelectorAll('.post-card');
     const loadMoreBtn = document.querySelector('.load-more');
     let currentIndex = 0;
-    const itemsPerClick = 3; // how many posts to show per click
+    const itemsPerClick = 3;
 
     function showMorePosts() {
       for (let i = currentIndex; i < currentIndex + itemsPerClick && i < posts.length; i++) {
-        posts[i].classList.add('show');
+        setTimeout(() => {
+          posts[i].classList.add('show');
+          posts[i].classList.add('new-load');
+        }, (i - currentIndex) * 150); // stagger the animations
       }
       currentIndex += itemsPerClick;
 
       if (currentIndex >= posts.length) {
-        loadMoreBtn.style.display = 'none'; // hide button when all posts are shown
+        loadMoreBtn.style.display = 'none';
       }
     }
 
-    // show initial posts
+    // Show initial posts
     showMorePosts();
 
-    loadMoreBtn.addEventListener('click', showMorePosts);
+    loadMoreBtn.addEventListener('click', () => {
+      showMorePosts();
+      
+      // Add loading effect to button
+      loadMoreBtn.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        loadMoreBtn.style.transform = 'scale(1)';
+      }, 150);
+    });
+
+   
+
+    // Scroll indicator
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scroll-indicator').style.width = scrolled + '%';
+    });
+
+    // Parallax effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      document.body.style.backgroundPosition = `0 ${rate}px`;
+    });
+
+    // Enhanced card interactions
+    posts.forEach(card => {
+      card.addEventListener('mouseenter', (e) => {
+        // Add subtle glow effect
+        e.target.style.boxShadow = '0 20px 60px rgba(102, 126, 234, 0.2)';
+      });
+      
+      card.addEventListener('mouseleave', (e) => {
+        // Reset shadow
+        e.target.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
+      });
+    });
+
+    // Smooth reveal on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    // Add click animation to load more button
+    loadMoreBtn.addEventListener('mousedown', () => {
+      loadMoreBtn.style.transform = 'scale(0.92)';
+    });
+
+    loadMoreBtn.addEventListener('mouseup', () => {
+      loadMoreBtn.style.transform = 'scale(1)';
+    });
   </script>
 </body>
 </html>
