@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Get Started - NKO Blog</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <div class="loading-text">Preparing your coding journey...</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">NKO Blog</div>
+    <ul>
+      <li><a href="https://nkogallardo.github.io/Personal-website/my%20web.html">About</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a href="Post.html">Post</a></li>
+      <li><a href="" class="active">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Start Your Coding Journey</h1>
+      <p>Everything you need to know to begin your adventure in programming, from complete beginner to confident developer.</p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <div class="nav-tab active" onclick="showTab('roadmap')">🗺️ Roadmap</div>
+      <div class="nav-tab" onclick="showTab('resources')">📚 Resources</div>
+      <div class="nav-tab" onclick="showTab('tools')">🛠️ Tools</div>
+      <div class="nav-tab" onclick="showTab('tips')">💡 Tips</div>
+    </div>
+
+    <!-- Roadmap Tab -->
+    <div id="roadmap" class="tab-content active">
+      <div class="content-section">
+        <h2>Your Learning Roadmap</h2>
+        <p>Follow this structured path to build a solid foundation in web development. Each step builds on the previous one, so take your time and practice regularly.</p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4>HTML Basics</h4>
+            <p>Learn the structure of web pages with HTML elements, tags, and semantic markup.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4>CSS Styling</h4>
+            <p>Master visual design with CSS, including flexbox, grid, and responsive design.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4>JavaScript Fundamentals</h4>
+            <p>Add interactivity with variables, functions, loops, and DOM manipulation.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h4>Version Control</h4>
+            <p>Learn Git and GitHub to manage your code and collaborate with others.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h4>Build Projects</h4>
+            <p>Apply your skills by creating real websites and applications.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">6</div>
+            <h4>Advanced Topics</h4>
+            <p>Explore frameworks like React, backend development, and databases.</p>
+          </div>
+        </div>
+
+        <div class="progress-tracker">
+          <h3>Track Your Progress</h3>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">Complete HTML basics course</div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">Build your first webpage</div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">Learn CSS fundamentals</div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">Create a responsive layout</div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">JavaScript variables and functions</div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-checkbox" onclick="toggleCheck(this)"></div>
+            <div class="progress-label">Build an interactive project</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resources Tab -->
+    <div id="resources" class="tab-content">
+      <div class="content-section">
+        <h2>Essential Learning Resources</h2>
+        <p>Curated resources to accelerate your learning journey. These platforms offer structured courses, interactive exercises, and real-world projects.</p>
+
+        <div class="resource-grid">
+          <a href="https://cssbattle.dev/" class="resource-card" target="_blank">
+            <div class="resource-icon">🏕️</div>
+            <h4>cssbattle.dev</h4>
+            <p></p>
+          </a>
+          <a href="https://www.sololearn.com/" class="resource-card" target="_blank">
+            <div class="resource-icon">📱</div>
+            <h4>SoloLearn</h4>
+            <p>Mobile-friendly coding lessons with interactive exercises and community challenges.</p>
+          </a>
+          <a href="https://syntax.fm/system/theme" class="resource-card" target="_blank">
+            <div class="resource-icon">📖</div>
+            <h4>syntax.FM (Radio)</h4>
+            <p></p>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=web+development+tutorial" class="resource-card" target="_blank">
+            <div class="resource-icon">📺</div>
+            <h4>YouTube Tutorials</h4>
+            <p>Free video tutorials from experienced developers. Visual learning at your own pace.</p>
+          </a>
+          <a href="https://codepen.io/" class="resource-card" target="_blank">
+            <div class="resource-icon">✨</div>
+            <h4>CodePen</h4>
+            <p>Online code editor to experiment, share, and learn from others' code examples.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Tab -->
+    <div id="tools" class="tab-content">
+      <div class="content-section">
+        <h2>Essential Development Tools</h2>
+        <p>Set up your development environment with these must-have tools that professional developers use daily.</p>
+
+        <h3>Code Editors</h3>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon">🔵</div>
+            <h4>Visual Studio Code</h4>
+            <p>Free, powerful editor with extensions, debugging, and Git integration. Most popular choice.</p>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon">⚡</div>
+            <h4>Sublime Text</h4>
+            <p>Fast, lightweight editor with powerful features and customization options.</p>
+          </div>
+        </div>
+
+        <h3>Version Control</h3>
+        <div class="code-example">
+          <code>
+# Install Git and set up your identity
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Create your first repository
+git init my-project
+cd my-project
+echo "# My First Project" >> README.md
+git add README.md
+git commit -m "Initial commit"
+          </code>
+        </div>
+
+        <h3>Browser Developer Tools</h3>
+        <p>Every modern browser includes powerful developer tools. Press F12 to access them and learn to inspect elements, debug JavaScript, and monitor network requests.</p>
+      </div>
+    </div>
+
+    <!-- Tips Tab -->
+    <div id="tips" class="tab-content">
+      <div class="content-section">
+        <h2>Pro Tips for Success</h2>
+        <p>Learn from common mistakes and accelerate your progress with these proven strategies from experienced developers.</p>
+
+        <h3>🎯 Focus on Fundamentals</h3>
+        <p>Don't rush to frameworks. Master HTML, CSS, and JavaScript first. A strong foundation makes everything else easier to learn.</p>
+
+        <h3>🏗️ Build Projects</h3>
+        <p>Theory is important, but practice is essential. Start building projects as soon as you learn the basics. Even simple projects teach valuable lessons.</p>
+
+        <h3>🤝 Find Friendly</h3>
+        <p>Connect with other developers at school work or some wear else it is incredibly supportive and helpful.</p>
+
+        <h3>🔄 Practice Daily</h3>
+        <p>Consistency beats motivation. Code for 30 minutes daily rather than 5 hours once a week.</p>
+
+        <h3>📚 Read Others Code</h3>
+        <p>Study well-written code on GitHub. You'll learn best practices, coding patterns, and different approaches to solving problems.</p>
+
+        <h3>🐛 Embrace Debugging AKA your mistakes</h3>
+        <p>Bugs are learning opportunities, not failures. Each error you fix makes you a better developer.</p>
+
+        <div class="code-example">
+          <code>
+// Debugging tip: Use descriptive console.log messages
+console.log("🔍 User data:", userData);
+console.log("✅ Function executed successfully");
+console.log("❌ Error in calculation:", error);
+          </code>
+        </div>
+
+        <h3>💡 Start Small, Think Big</h3>
+        <p>Begin with simple projects like a personal website or calculator. Each project teaches something new and builds confidence.</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Start Coding?</h2>
+        <p>Your journey begins with a single line of code. Take the first step today!</p>
+        <a href="mailto:NKOgalado@gmail.com" class="cta-button" target="_blank">Start Learning Now</a>
+      </div>
+    </div>
+
+    <!-- Quick Start Section -->
+    <div class="content-section">
+      <h2>Quick Start: Your First Webpage</h2>
+      <p>Create your very first webpage in just a few minutes. Copy this code into a text file, save it as "index.html", and open it in your browser:</p>
+
+      <div class="code-example">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border-radius: 10px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage. I'm learning to code!&lt;/p&gt;
+  &lt;button onclick="alert('You clicked me!')"&gt;Click Me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </div>
+
+      <p>Congratulations! You've just written HTML, CSS, and JavaScript. This simple page demonstrates the three core technologies of web development working together.</p>
+    </div>
+  </div>
+
+  <script>
+    // Tab functionality
+    function showTab(tabName) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(content => {
+        content.classList.remove('active');
+      });
+
+      // Remove active class from all tabs
+      const tabs = document.querySelectorAll('.nav-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Show selected tab content
+      document.getElementById(tabName).classList.add('active');
+      
+      // Add active class to clicked tab
+      event.target.classList.add('active');
+    }
+
+    // Progress tracker functionality
+    function toggleCheck(checkbox) {
+      checkbox.classList.toggle('checked');
+      
+      // Add a small celebration animation
+      if (checkbox.classList.contains('checked')) {
+        checkbox.style.transform = 'scale(1.2)';
+        setTimeout(() => {
+          checkbox.style.transform = 'scale(1)';
+        }, 200);
+      }
+    }
+
+    // Loading screen
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading-screen");
+      loader.classList.add("hidden");
+      setTimeout(() => loader.style.display = "none", 800);
+    });
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scroll-progress').style.width = scrolled + '%';
+    });
+
+    // Intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    // Smooth reveal animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.content-section, .step-card');
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Parallax effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.3;
+      document.body.style.backgroundPosition = `0 ${rate}px`;
+    });
+
+    // Add some interactive sparkle effects
+    document.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.98) {
+        createSparkle(e.clientX, e.clientY);
+      }
+    });
+
+    function createSparkle(x, y) {
+      const sparkle = document.createElement('div');
+      sparkle.style.position = 'fixed';
+      sparkle.style.left = x + 'px';
+      sparkle.style.top = y + 'px';
+      sparkle.style.width = '4px';
+      sparkle.style.height = '4px';
+      sparkle.style.background = '#fff';
+      sparkle.style.borderRadius = '50%';
+      sparkle.style.pointerEvents = 'none';
+      sparkle.style.zIndex = '1000';
+      sparkle.style.animation = 'sparkleAnim 1s ease-out forwards';
+      
+      document.body.appendChild(sparkle);
+      
+      setTimeout(() => {
+        document.body.removeChild(sparkle);
+      }, 1000);
+    }
+
+    // Add sparkle animation to CSS
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes sparkleAnim {
+        0% {
+          transform: scale(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5) rotate(180deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
