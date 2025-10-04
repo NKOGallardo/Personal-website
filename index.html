@@ -199,12 +199,65 @@
     </section>
   </main>  
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <p>Reach out for collaborations or just to say hi!</p>
-        <p class="Contantparagraph">Or if you want lession about coding</p>
-        <a href="mailto:NKOgalado@gmail.com" style="color:red;" tect>Email Me</a>
+
+        <!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p class="contact-intro">Got a project, question, or just want to say hi? Fill in the form below 👇</p>
+
+  <form action="https://formsubmit.co/nkogalado@gmail.com" method="POST" class="contact-form">
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Your Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    </div>
+
+    <!-- Subject -->
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="What’s this about?" required>
+    </div>
+
+    <!-- Inquiry Type -->
+    <div class="form-group">
+      <label for="inquiry">Inquiry Type</label>
+      <select id="inquiry" name="inquiry">
+        <option value="general">General Question</option>
+        <option value="project">Project Collaboration</option>
+        <option value="support">Support</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group full-width">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+    </div>
+
+    <!-- Hidden fields (FormSubmit) -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Button -->
+    <button type="submit" class="btn-submit">Send Message 🚀</button>
+  </form>
+</section>
+
+
+
     </section>
     <footer>
         <p>&copy; 2025 Ntobeko | All Rights Reserved</p>
@@ -212,7 +265,6 @@
 </body>
 <script src="me.js"></script>
 </html>
-
 
 
 
