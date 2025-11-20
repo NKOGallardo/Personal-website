@@ -1,5 +1,49 @@
 /* Web-style.css */
 
+/* Hide default cursor */
+body, * {
+    cursor: none;
+}
+
+/* Main dot */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #00aaff;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+/* Outer ring */
+.cursor-ring {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #00aaff;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease, border-color 0.15s ease;
+}
+
+/* Hover effect on clickable items */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring,
+input:hover ~ .cursor-ring {
+    width: 40px;
+    height: 40px;
+    border-color: #ffaa00;
+}
+
+
 /* Reset and Base */
 * {
     margin: 0;
