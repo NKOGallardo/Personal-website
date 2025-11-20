@@ -491,6 +491,31 @@ section li {
             width: 250px;
         }
 
+        .tech-boxes {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tech-boxes span {
+    background: rgba(0, 170, 255, 0.15);
+    border: 1px solid #00aaff;
+    color: #00ccff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    transition: 0.2s ease;
+}
+
+.tech-boxes span:hover {
+    background: #00aaff;
+    color: #00121c;
+    border-color: #00aaff;
+    transform: translateY(-2px);
+}
+
 /* For build */ 
 
     .build-button {
