@@ -1,4 +1,38 @@
 
+/* cursor */
+
+const dot = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+
+let ringX = 0, ringY = 0;
+let mouseX = 0, mouseY = 0;
+
+// Mouse move tracking
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+});
+
+// Smooth ring movement
+function animateRing() {
+    ringX += (mouseX - ringX) / 6;
+    ringY += (mouseY - ringY) / 6;
+
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+
+    requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Detect interactive elements for hover effect
+document.querySelectorAll('a, button, input, img')
+    .forEach(el => {
+        el.classList.add('hover-target');
+    });
     /* me.js | place this in the same folder as your HTML */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -99,3 +133,4 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[slideIndex].classList.add('active');
   }
   setInterval(showNextTestimonial, 4000);
+
