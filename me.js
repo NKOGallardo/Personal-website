@@ -133,4 +133,3 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[slideIndex].classList.add('active');
   }
   setInterval(showNextTestimonial, 4000);
-
