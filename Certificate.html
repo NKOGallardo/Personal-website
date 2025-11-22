@@ -5,129 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link class="icon" rel="icon" href="images/Profile.png">
     <title>My Certificate</title>
+
+    <style>
+        /* ===== Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== Header ===== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 10px rgb(27, 27, 27);
+        }
+
+        /* ===== Main Content ===== */
+        main {
+            text-align: center;
+            padding: 120px 20px;
+            animation: fadeIn 1.2s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            animation: glow 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #444; }
+            to { text-shadow: 0 0 20px #fff; }
+        }
+
+        /* ===== Certificate Buttons ===== */
+        .c {
+            display: inline-block;
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            background: #1e293b;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: transform .3s ease, box-shadow .3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover animation */
+        .c:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 15px rgba(0, 174, 255, 0.7);
+        }
+
+        /* Tap ripple effect */
+        .c:active::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            animation: ripple 0.4s ease-out;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* ===== Mobile Responsive ===== */
+        @media (max-width: 600px) {
+            .c {
+                width: 90%;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
 </head>
- <header>
-        <div class="logo">NKO_Gallardo</div>
-        <nav class="nav-links">      
-                <a href="index.html">back</a>
-        </nav>
-    </header>
+
+<body>
+
+<header>
+    <div class="logo">NKO_Gallardo</div>
+
+    <nav class="nav-links">
+        <a href="index.html">back</a>
+    </nav>
+</header>
+
 <main>
     <section>
-        <h1> Tap to see the certificate's</h1>
+        <h1>Tap to see the certificates</h1>
+
         <a class="c" href="https://www.sololearn.com/certificates/CC-Y9WIK73K">
             <p>Front-end</p>
         </a>
+
         <a class="c" href="https://www.sololearn.com/certificates/CC-RD0QLYRY">
             <p>HTML</p>
         </a>
+
         <a class="c" href="https://www.sololearn.com/certificates/CC-HAXZLS8R">
             <p>CSS</p>
         </a>
-        <a class="c" href="https://www.sololearn.com/certificates/CC-2U6XVV1T" >
+
+        <a class="c" href="https://www.sololearn.com/certificates/CC-2U6XVV1T">
             <p>LLM</p>
         </a>
     </section>
 </main>
+
 </body>
-<style>
-    /* Global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #000;
-  color: #fff;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: #262626;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
-}
-
-.nav-links a {
-    margin-left: 30px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: orange;
-}
-
-/* Mobile Menu */
-#mobile-icon {
-    display: block;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-#mobile-icon .line1,
-#mobile-icon .line2,
-#mobile-icon .line3 {
-    height: 3px;
-    width: 25px;
-    background: #fff;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-#mobile-icon .mobile {
-    display: block;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#mobile-icon.active .mobile {
-    display: flex;
-}
-
-/* Certificates */
-main {
-  padding-top: 100px;
-  text-align: center;
-}
-
-.c {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    background: #1e293b;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-</style>
 </html>
-
-
