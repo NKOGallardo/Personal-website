@@ -244,7 +244,7 @@
     line-height: 1.8;
     margin-bottom: 1rem;
     opacity: 0.95;
-    animation: fadeInUp 3s ease-out 0.4s backwards;
+    animation: fadeInUp 2s ease-out 0.4s backwards;
 }
 
 .text-hero p:first-of-type {
@@ -289,7 +289,7 @@
     flex-wrap: wrap;
     justify-content: center;
     z-index: 1;
-    animation: fadeInUp 6s ease-out 0.8s backwards;
+    animation: fadeInUp 2s ease-out 0.8s backwards;
 }
 
 .btn {
