@@ -358,6 +358,7 @@
 @media (max-width: 768px) {
     .hero {
         padding: 3rem 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .text-hero h1 {
