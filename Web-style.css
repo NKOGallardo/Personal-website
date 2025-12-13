@@ -185,7 +185,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 4rem 8rem;
     background: linear-gradient(180deg, #000000 0%, #3d3d3d 50%);
     position: relative;
     overflow: hidden;
@@ -197,7 +197,6 @@
 
 .hero p {
     text-align: center;
-    width: 800px;
     font-size: 1.25rem;
     font-family: cursive;
     margin-bottom: 20px;
@@ -367,6 +366,7 @@
     
     .text-hero p {
         font-size: 1.1rem;
+        width: 10px;
     }
     
     .text-hero p:first-of-type {
