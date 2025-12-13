@@ -368,6 +368,7 @@
     .text-hero p {
         font-size: 1.1rem;
         width: 10px;
+        font-family: 'Times New Roman', Times, serif;
     }
     
     .text-hero p:first-of-type {
