@@ -1,352 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ntobeko | Portfolio</title>
-    <link rel="stylesheet" href="Web-style.css">
-    <link rel="icon" type="image/png" href="images/Logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ntobeko | Portfolio</title>
+  <link rel="stylesheet" href="Web-style.css">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">NKO_Gallardo</div>
-        <nav class="nav-links">
-            <a href="#main">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div id="mobile-icon">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            <nav class="mobile">
-                <a href="#main">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="Certificate.html">Certificates</a>
-            </nav>
-        </div>
-    </header>
-  <main>  
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
-    <!-- Hero Section -->
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <a href="#main" class="logo">NKO_<span>GALLARDO</span></a>
+    <nav class="nav-links">
+      <a href="#main">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div id="mobile-icon" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <nav class="mobile-menu">
+        <a href="#main">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="Certificate.html">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
     <section id="main" class="hero">
-        <div class="text-hero">
-            <h1>Hello, I'm Ntobeko</h1>
-        </div>   
-        <div class="image-hero">
-            <img src="images/NK_G.jpeg" alt="Ntobeko Gallardo" width="300" height="300">
+      <div class="hero-eyebrow">
+        <span class="dot-green"></span>
+        <span>Available for projects</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line" data-aos>NTOBEKO</span>
+        <span class="line italic" data-aos>Mhlungu</span>
+      </h1>
+
+      <div class="hero-sub">
+        <p>Front-end Developer · Self-taught · Based in Gauteng 🇿🇦</p>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <img src="images/NK_G.jpeg" alt="Ntobeko Gallardo" />
+          <div class="frame-tag">EST. 2024</div>
         </div>
-        
-            <p>A passionate coder and future tech innovator</p>
-            <p>I'm a self-taught web developer and passionate about building websites and smooth user interfaces. I learn from real projects.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">9+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2×</span>
+            <span class="stat-label">Sports Award</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Ambition</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="https://nkocoding.codes" class="btn-ghost" target="_blank">Get Your Website ↗</a>
+      </div>
 
-        <div class="btn-hero"> 
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="https://nkocoding.codes" class="btn">Get your website</a>
-        </div>    
-    </section id="Skill" class="section1">
+      <div class="hero-scroll">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
 
-    <!-- Skill Section -->
-        <section class="skills">
+    <!-- ═══ MARQUEE ═══ -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>HTML</span><span class="sep">✦</span>
+        <span>CSS</span><span class="sep">✦</span>
+        <span>JAVASCRIPT</span><span class="sep">✦</span>
+        <span>REACT</span><span class="sep">✦</span>
+        <span>VITE</span><span class="sep">✦</span>
+        <span>TYPESCRIPT</span><span class="sep">✦</span>
+        <span>FIREBASE</span><span class="sep">✦</span>
+        <span>TAILWIND</span><span class="sep">✦</span>
+        <span>GIT</span><span class="sep">✦</span>
+        <span>HTML</span><span class="sep">✦</span>
+        <span>CSS</span><span class="sep">✦</span>
+        <span>JAVASCRIPT</span><span class="sep">✦</span>
+        <span>REACT</span><span class="sep">✦</span>
+        <span>VITE</span><span class="sep">✦</span>
+        <span>TYPESCRIPT</span><span class="sep">✦</span>
+        <span>FIREBASE</span><span class="sep">✦</span>
+        <span>TAILWIND</span><span class="sep">✦</span>
+        <span>GIT</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section class="skills" id="skills">
+      <div class="section-header">
+        <span class="section-num">01</span>
         <h2>Skills</h2>
-        <div class="skill-bar">
-            <p>HTML</p>
-        <div class="bar"><div class="progress" style="width: 100%;"></div></div>
-            <p>CSS</p>
-        <div class="bar"><div class="progress" style="width: 95%;"></div></div>
-            <p>JavaScript</p>
-        <div class="bar"><div class="progress" style="width: 70%;"></div></div>
-            <p>Responsive Design</p>
-        <div class="bar"><div class="progress" style="width: 92%;"></div></div>
-            <p>UI Animation</p>
-        <div class="bar"><div class="progress" style="width: 80%;"></div></div>    
-    </div>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">HTML</span>
+            <span class="skill-pct">100%</span>
+          </div>
+          <div class="bar"><div class="progress" data-width="100"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">CSS</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="bar"><div class="progress" data-width="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="bar"><div class="progress" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Responsive Design</span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="bar"><div class="progress" data-width="92"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">UI Animation</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="bar"><div class="progress" data-width="80"></div></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="Achievements">
-       <h2>Achievements</h2>
-       <ul>
-           <li>🏆 Gauteng Sports Award Winner (2024 + 2025)</li>
-           <li>💻 Comfortable with React</li>
-           <li>🏉 Award winning Rugby player </li>
-           <li>😮‍💨 The founder of <a href="https://nkocoding.codes">NKO_CODING</a></li>
-        </ul>
+    <!-- ═══ ACHIEVEMENTS ═══ -->
+    <section id="Achievements" class="achievements">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>Achievements</h2>
+      </div>
+      <div class="achievement-list">
+        <div class="achievement-item">
+          <span class="ach-icon">🏆</span>
+          <div>
+            <p class="ach-title">Gauteng Sports Award Winner</p>
+            <p class="ach-sub">2024 + 2025</p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <span class="ach-icon">💻</span>
+          <div>
+            <p class="ach-title">Comfortable with React</p>
+            <p class="ach-sub">Building real-world apps</p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <span class="ach-icon">🏉</span>
+          <div>
+            <p class="ach-title">Award-winning Rugby Player</p>
+            <p class="ach-sub">On the field & in the code</p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <span class="ach-icon">🚀</span>
+          <div>
+            <p class="ach-title">Founder of NKO_CODING</p>
+            <p class="ach-sub"><a href="https://nkocoding.codes" target="_blank">nkocoding.codes ↗</a></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Believe Section -->
-    <section id="Believe" class="testimonial">
-        <h2>What I Believe</h2>
+    <!-- ═══ BELIEF ═══ -->
+    <section class="belief">
+      <div class="belief-inner">
+        <span class="belief-mark">"</span>
         <blockquote>
-            "Every line of code I write is a step closer to my dream—changing the world through technology." – Ntobeko Mhlungu
+          Every line of code I write is a step closer to my dream — changing the world through technology.
         </blockquote>
+        <cite>— Ntobeko Mhlungu</cite>
+      </div>
     </section>
 
-     <!-- About Section -->
-    <section class="section1" id="about">
-        <div>
-            <h2 class="about p">About Me</h2><hr>
-            <p>I am a passionate <strong>Front-end Developer</strong>. I enjoy building <strong>websites</strong> and exploring <strong>JavaScript</strong>. </p>
-            <p>Here are some technologies I have been working with:</p>
-                <ul>
-                    <li><strong>HTML</strong></li>
-                    <li><strong>CSS</strong></li>
-                    <li><strong>Typescript</strong></li>
-                    <li><strong>React</strong></li>
-                    <li><strong>Vite</strong></li>
-                    <li><strong>github</strong></li>
-                    <li><strong>github actions</strong></li>
-                    <li><strong>git</strong></li>
-                    <li><strong>Firebase</strong></li> 
-                    <li><strong>Notion</strong></li> 
-                    <li><strong>NPM</strong></li>
-                    <li><strong>Tailwindcss</strong></li>
-                    <li><strong>MySQL</strong></li>
-                    <li><strong>Arduino</strong>
-                    <li><strong>Vercel</strong></li>
-                </ul>
-            <p style="margin-bottom: 30px;">Outside of coding, I play <strong>rugby</strong></p>
-            <p>My certificate 
-                <a class="Cir" href="Certificate.html" >certificate</a>
-            </p>
-            <button class="build-button" id="buildButton">
-                <span class="block-letter">B</span>
-                <span class="block-letter">U</span>
-                <span class="block-letter">I</span>
-                <span class="block-letter">L</span>
-                <span class="block-letter">D</span>
-            </button>
-
-            <!---- NKO's Socails ---->
-  <div class="socailsBox">
-    <button>
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-instagram"
-            viewBox="0 0 16 16"
-            style="margin-right: 10px;"
-        >
-        <path
-        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-        ></path>
-            </svg>
-        <a class="NAME" href="http://instagram.com/NKO_Gallardo" ></span>Instragram</span></a>
-    </button>
-    <button>
-        <span>
-         <svg xmlns="http://www.w3.org/2000/svg"
-          fill="#fff" 
-          height="1em" 
-          viewBox="0 0 496 512"
-          >
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-            </svg>
-        </span>
-        <a class="NAME" href="https://github.com/NKOGallardo" ><span>Github</span></a>
-    </button>
-    <button>
-        <span>
-         <svg xmlns="http://www.w3.org/2000/svg"
-          fill="#fff" 
-          height="1em" 
-          viewBox="0 0 496 512"
-          >
-            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-            </svg>
-        </span>
-        <a class="NAME" href="https://www.linkedin.com/in/ntobeko-mhlungu-87b261358/" ><span>Linkin</span></a>
-    </button>
-  </div>
+    <!-- ═══ ABOUT ═══ -->
+    <section class="about-section" id="about">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">I'm a passionate <strong>Front-end Developer</strong> who builds websites and smooth user interfaces. Self-taught, learning from real projects.</p>
+          <p>Outside of coding, I play <strong>rugby</strong> — the same discipline and teamwork translates directly into how I build.</p>
+          <p>
+            <a class="cert-link" href="Certificate.html">View my certificate →</a>
+          </p>
+          <div class="socials">
+            <a href="http://instagram.com/NKO_Gallardo" target="_blank" class="social-link">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+              Instagram
+            </a>
+            <a href="https://github.com/NKOGallardo" target="_blank" class="social-link">
+              <svg width="18" height="18" viewBox="0 0 496 512" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ntobeko-mhlungu-87b261358/" target="_blank" class="social-link">
+              <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <a href="https://nkocoding.codes" class="build-btn" target="_blank">BUILD WITH ME</a>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        
-        <p style="text-align: center;">Tap on the images to view the projects</p>
-        <h2>Projects 🔥</h2>
-        <div class="projects">
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">Pokimon Search</p>
-                <div class="tech-boxes">
-                    <span>React</span>
-                    <span>JavaScript</span>
-                    <span>Vite</span>
-                    <span>API</span>
-                </div>
-                <a href="https://nkogallardo.github.io/Pok-mon/" target="_blank">
-                    <img class="p2" src="images/Screenshot (25).png" alt="Screen shot">
-                </a>
-            </div>
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">A web store</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://nkocoding.codes/index.html" target="_blank">
-                    <img class="p2" src="Screenshot (14).png" alt="Screen shot">
-                </a>
-            </div>
-             <div class="project-card">
-                <p style=" padding-bottom: 10px;">A photographer</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://nkogallardo.github.io/Soul/" target="_blank">
-                    <img class="p2" src="images/Screenshot (19).png" alt="Screen shot">
-                </a>
-            </div>
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">Study-stream</p>
-                <div class="tech-boxes">
-                    <span>React</span>
-                    <span>Vite</span>
-                    <span>Typescript</span>
-                    <span>Superbase</span>
-                    <span>SQL</span>
-                    <span>Tailwind</span>
-
-                </div>
-
-                <a href="https://study-stream.vercel.app/" target="_blank">
-                    <img class="p2" src="images/Screenshot (7).png" alt="Screen shot">
-                </a>
-            </div>
-            
-              <div class="project-card">
-                <p style=" padding-bottom: 10px;">My blog post</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://nkogallardo.github.io/Personal-website/Blog/Post.html" target="_blank">
-                    <img class="p2" src="images/Screenshot (13).png" alt="Screen shot">
-                </a>
-            </div>
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">A web store</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://nkocoding.codes/index.html" target="_blank">
-                    <img class="p2" src="Screenshot (14).png" alt="Screen shot">
-                </a>
-            </div>
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">Guess the number</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://nkogallardo.github.io/The-game/" target="_blank">
-                <img class="p1" src="images/Guess the Number.png" alt="Screen shot">
-                </a>
-            </div>
-            <div class="project-card">
-                <p style=" padding-bottom: 10px;">Pixel-Coin</p>
-                <div class="tech-boxes">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="https://nkogallardo.github.io/Pixel-Coin/Index.html" target="_blank">
-                <img class="p2" src="images/Pixel-Coin - Home - Google Chrome 2025_05_26 20_14_22.png" alt="Screen shot">
-                </a>
-            </div>
+        <div class="tech-cloud">
+          <p class="tech-title">Tech Stack</p>
+          <div class="tech-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>React</span><span>Vite</span><span>TypeScript</span>
+            <span>GitHub</span><span>GitHub Actions</span><span>Git</span>
+            <span>Firebase</span><span>Notion</span><span>Tailwind</span>
+          </div>
         </div>
+      </div>
     </section>
-  </main>  
 
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>Work</h2>
+      </div>
+      <p class="projects-hint">Click images to view live projects</p>
+      <div class="projects-grid">
 
-        <!-- Contact Section -->
-<section class="contact" id="contact">
-  <h2>Contact Me</h2>
-  <p class="contact-intro">Got a project, question, or just want to say hi? Fill in the form below 👇</p>
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/Pok-mon/" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Screenshot (25).png" alt="Pokémon Search">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Pokémon Search</p>
+            <div class="card-tags"><span>React</span><span>JS</span><span>Vite</span><span>API</span></div>
+          </div>
+        </div>
 
-  <form action="https://formspree.io/f/xzzjvpdp" method="POST" class="contact-form">
-    <!-- Name -->
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    </div>
+        <div class="project-card">
+          <a href="https://study-stream.vercel.app/" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Screenshot (5).png" alt="Study-stream">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Study-Stream</p>
+            <div class="card-tags"><span>React</span><span>TS</span><span>Supabase</span><span>Tailwind</span></div>
+          </div>
+        </div>
 
-    <!-- Email -->
-    <div class="form-group">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/Soul/" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Screenshot (19).png" alt="Photographer site">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Photographer</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Phone -->
-    <div class="form-group">
-      <label for="phone">Your Phone</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-    </div>
+        <div class="project-card">
+          <a href="https://nkocoding.codes/index.html" target="_blank">
+            <div class="card-img-wrap">
+              <img src="Screenshot (14).png" alt="Web Store">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Web Store</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Subject -->
-    <div class="form-group">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" placeholder="What’s this about?" required>
-    </div>
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/Hloni-Web/" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Screenshot (10).png" alt="My Sister">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">My Sister</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Inquiry Type -->
-    <div class="form-group">
-      <label for="inquiry">Inquiry Type</label>
-      <select id="inquiry" name="inquiry">
-        <aption value="Issue!">Report Issues</aption>  
-        <option value="General">General Question</option>
-        <option value="Collaboration">Project Collaboration</option>
-        <option value="Support">Support</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/Personal-website/Blog/Post.html" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Screenshot (13).png" alt="Blog Post">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Blog Post</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Message -->
-    <div class="form-group full-width">
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
-    </div>
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/The-game/" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Guess the Number.png" alt="Guess the Number">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Guess the Number</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Hidden fields (FormSubmit) -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+        <div class="project-card">
+          <a href="https://nkogallardo.github.io/Pixel-Coin/Index.html" target="_blank">
+            <div class="card-img-wrap">
+              <img src="images/Pixel-Coin - Home - Google Chrome 2025_05_26 20_14_22.png" alt="Pixel-Coin">
+              <div class="card-overlay">VIEW PROJECT ↗</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <p class="card-title">Pixel-Coin</p>
+            <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
 
-    <!-- Button -->
-    <button type="submit" class="btn-submit">Send Message 🚀</button>
-  </form>
-</section>
-
-
-
+      </div>
     </section>
-    <footer>
-        <p>&copy; 2025 Ntobeko | All Rights Reserved</p>
-    </footer>
+
+  </main>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-intro">Got a project or just want to say hi? Let's talk.</p>
+
+    <form action="https://formspree.io/f/xzzjvpdp" method="POST" class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+27 ...">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inquiry">Inquiry Type</label>
+        <select id="inquiry" name="inquiry">
+          <option value="General">General Question</option>
+          <option value="Collaboration">Project Collaboration</option>
+          <option value="Support">Support</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
+      </div>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn-submit">Send Message ↗</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">NKO_GALLARDO</span>
+      <p>&copy; 2025 Ntobeko Mhlungu · All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="http://instagram.com/NKO_Gallardo" target="_blank">IG</a>
+        <a href="https://github.com/NKOGallardo" target="_blank">GH</a>
+        <a href="https://www.linkedin.com/in/ntobeko-mhlungu-87b261358/" target="_blank">LI</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="me.js"></script>
 </body>
-<script src="me.js"></script>
-
-
 </html>
-
-
-
-
