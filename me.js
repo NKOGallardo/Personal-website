@@ -1,135 +1,179 @@
+/* ═══════════════════════════════════════════════
+   NKO_GALLARDO — me.js
+   All site interactivity
+═══════════════════════════════════════════════ */
 
-/* cursor */
-
-const dot = document.querySelector('.cursor-dot');
+// ── 1. CUSTOM CURSOR ──────────────────────────
+const dot  = document.querySelector('.cursor-dot');
 const ring = document.querySelector('.cursor-ring');
 
-let ringX = 0, ringY = 0;
-let mouseX = 0, mouseY = 0;
+let mx = -200, my = -200;
+let rx = -200, ry = -200;
 
-// Mouse move tracking
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
+document.addEventListener('mousemove', e => {
+  mx = e.clientX;
+  my = e.clientY;
+  dot.style.left = mx + 'px';
+  dot.style.top  = my + 'px';
 });
 
-// Smooth ring movement
-function animateRing() {
-    ringX += (mouseX - ringX) / 6;
-    ringY += (mouseY - ringY) / 6;
+// Smooth lerp ring
+(function animateCursor() {
+  requestAnimationFrame(animateCursor);
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+})();
 
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
+// Hover expand
+document.querySelectorAll('a, button, input, select, textarea, .project-card, .achievement-item, .tech-tags span').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    ring.style.width  = '58px';
+    ring.style.height = '58px';
+    ring.style.borderColor = 'rgba(184,249,89,0.9)';
+    dot.style.width  = '3px';
+    dot.style.height = '3px';
+  });
+  el.addEventListener('mouseleave', () => {
+    ring.style.width  = '36px';
+    ring.style.height = '36px';
+    ring.style.borderColor = 'rgba(184,249,89,0.6)';
+    dot.style.width  = '6px';
+    dot.style.height = '6px';
+  });
+});
 
-    requestAnimationFrame(animateRing);
+// Click feedback
+document.addEventListener('mousedown', () => {
+  dot.style.transform  = 'translate(-50%,-50%) scale(0.4)';
+  ring.style.transform = 'translate(-50%,-50%) scale(0.8)';
+});
+document.addEventListener('mouseup', () => {
+  dot.style.transform  = 'translate(-50%,-50%) scale(1)';
+  ring.style.transform = 'translate(-50%,-50%) scale(1)';
+});
+
+
+// ── 2. HEADER SCROLL ──────────────────────────
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+}, { passive: true });
+
+
+// ── 3. MOBILE MENU ────────────────────────────
+const mobileIcon = document.getElementById('mobile-icon');
+
+if (mobileIcon) {
+  mobileIcon.addEventListener('click', () => {
+    mobileIcon.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  mobileIcon.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileIcon.classList.remove('active');
+    });
+  });
 }
-animateRing();
 
-// Detect interactive elements for hover effect
-document.querySelectorAll('a, button, input, img')
-    .forEach(el => {
-        el.classList.add('hover-target');
-    });
-    /* me.js | place this in the same folder as your HTML */
-
-document.addEventListener("DOMContentLoaded", () => {
-  /* ───────────────────────────────────────────
-     1. Mobile-nav hamburger toggle
-  ────────────────────────────────────────────*/
-  const mobileIcon  = document.getElementById("mobile-icon");
-  const mobileLinks = mobileIcon.querySelector(".mobile");
-
-  mobileIcon.addEventListener("click", () => {
-    mobileIcon.classList.toggle("active");
-  });
-
-  /* close the menu after a link is clicked */
-  mobileLinks.querySelectorAll("a").forEach(link =>
-    link.addEventListener("click", () => mobileIcon.classList.remove("active"))
-  );
-
-  /* ───────────────────────────────────────────
-     2. Animate skill bars on first reveal
-  ────────────────────────────────────────────*/
-  const skillsSection = document.querySelector(".skills");
-  const bars          = document.querySelectorAll(".skills .progress");
-
-  /* Save each bar’s target width, then start at 0 */
-  bars.forEach(bar => {
-    bar.dataset.target = bar.style.width;
-    bar.style.width = "0";
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        bars.forEach(bar => (bar.style.width = bar.dataset.target));
-        observer.disconnect();                   // run only once
-      }
-    });
-  }, { threshold: 0.45 });
-
-  observer.observe(skillsSection);
-
-  /* ───────────────────────────────────────────
-     3. Fun flip on profile image tap / click
-  ────────────────────────────────────────────*/
-  const profileImg = document.querySelector(".NKO");
-  if (profileImg) {
-    profileImg.addEventListener("click", () =>
-      profileImg.classList.toggle("flip"));
+// Close on outside click
+document.addEventListener('click', e => {
+  if (mobileIcon && !mobileIcon.contains(e.target)) {
+    mobileIcon.classList.remove('active');
   }
 });
 
 
- const button = document.getElementById('buildButton');
-  let alreadyClicked = false;
+// ── 4. SKILL BAR ANIMATION ────────────────────
+const progressBars = document.querySelectorAll('.progress');
 
-  button.addEventListener('click', () => {
-    if (alreadyClicked) return; // prevent double click
-    alreadyClicked = true;
-
-    button.classList.add('animate');
-
-    // Wait for animation to finish (~1 second)
-    setTimeout(() => {
-      window.location.href = 'build.html'; // 🔁 Redirect to your page
-    }, 1000);
-  });
-
-  // build/.//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      AOS.init();
-
-    // Animate skill bars
-    document.querySelectorAll('.skill-fill').forEach(el => {
-      el.style.width = getComputedStyle(el).getPropertyValue('--value');
-    });
-
-    // Set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 60 },
-      color: { value: "#00e6e6" },
-      shape: { type: "circle" },
-      opacity: { value: 0.2 },
-      size: { value: 3 },
-      line_linked: { enable: true, color: "#00e6e6", opacity: 0.1 },
-      move: { enable: true, speed: 2 }
-    },
-    interactivity: {
-      events: { onhover: { enable: true, mode: "repulse" } }
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bar = entry.target;
+      const target = bar.getAttribute('data-width');
+      bar.style.width = target + '%';
+      skillObserver.unobserve(bar);
     }
   });
+}, { threshold: 0.4 });
 
-  let slideIndex = 0;
-  const slides = document.querySelectorAll('.testimonial');
-  function showNextTestimonial() {
-    slides.forEach(s => s.classList.remove('active'));
-    slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].classList.add('active');
-  }
-  setInterval(showNextTestimonial, 4000);
+progressBars.forEach(bar => skillObserver.observe(bar));
+
+
+// ── 5. SCROLL REVEAL ──────────────────────────
+const revealEls = document.querySelectorAll(
+  '.skill-item, .achievement-item, .project-card, .stat, .tech-tags span, .about-text p, .about-lead, .belief-inner'
+);
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      // Staggered delay based on position
+      const siblings = [...entry.target.parentElement.children];
+      const index = siblings.indexOf(entry.target);
+      entry.target.style.transitionDelay = (index * 0.07) + 's';
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealEls.forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+
+
+// ── 6. ACTIVE NAV HIGHLIGHT ───────────────────
+const sections = document.querySelectorAll('section[id], main section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.style.color = 'var(--green)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => navObserver.observe(s));
+
+
+// ── 7. PROJECT CARD TILT ──────────────────────
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect  = card.getBoundingClientRect();
+    const x     = ((e.clientX - rect.left) / rect.width  - 0.5) * 8;
+    const y     = ((e.clientY - rect.top)  / rect.height - 0.5) * 8;
+    card.style.transform = `perspective(600px) rotateX(${-y}deg) rotateY(${x}deg)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
+    card.style.transition = 'transform 0.4s ease, background 0.2s';
+  });
+});
+
+
+// ── 8. FORM SUBMIT FEEDBACK ───────────────────
+const form = document.querySelector('.contact-form');
+if (form) {
+  form.addEventListener('submit', () => {
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'Sending...';
+    btn.style.opacity = '0.7';
+  });
+}
