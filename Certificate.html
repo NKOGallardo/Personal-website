@@ -88,41 +88,6 @@
             to { text-shadow: 0 0 20px #fff; }
         }
 
-        /* ===== Certificate Buttons ===== */
-        .c {
-            display: inline-block;
-            width: 200px;
-            padding: 20px;
-            margin: 20px;
-            background: #1e293b;
-            border-radius: 14px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: transform .3s ease, box-shadow .3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Hover animation */
-        .c:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 0 15px rgba(0, 174, 255, 0.7);
-        }
-
-        /* Tap ripple effect */
-        .c:active::after {
-            content: "";
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.3);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            border-radius: 50%;
-            animation: ripple 0.4s ease-out;
-        }
-
         @keyframes ripple {
             to {
                 transform: translate(-50%, -50%) scale(1);
@@ -162,30 +127,40 @@
     <section>
         <h1>Tap to see the certificates</h1>
 
-        <a class="c" href="https://www.sololearn.com/certificates/CC-Y9WIK73K">
-            <p>Front-end</p>
-        </a>
+        
+        <div class="parent">
+            <div class="div3">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-Y9WIK73K">
+                    <p>Front-end</p>
+               </a>
+            </div>
+            <div class="div4">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-6DQSGKYB">
+                    <p>Machine Learning for Beginners
+                </a>
+            </div>
+            <div class="div5">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-6ICLZPNC">
+                    <p>Web Development</p>
+                </a>
+            </div>
+            <div class="div6">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-RD0QLYRY">
+                    <p>HTML</p>
+                </a>
+            </div>
+            <div class="div7">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-HAXZLS8R">
+                    <p>CSS</p>
+                </a>
+            </div>
+            <div class="div8">
+                <a class="c" href="https://www.sololearn.com/certificates/CC-2U6XVV1T">
+                    <p>LLM</p>
+                </a>
+            </div>
+        </div>
 
-        <a class="c" href="https://www.sololearn.com/certificates/CC-6ICLZPNC">
-            <p>Web Development</p>
-        </a>
-
-        <a class="c" href="https://www.sololearn.com/certificates/CC-RD0QLYRY">
-            <p>HTML</p>
-        </a>
-
-        <a class="c" href="https://www.sololearn.com/certificates/CC-HAXZLS8R">
-            <p>CSS</p>
-        </a>
-
-        <a class="c" href="https://www.sololearn.com/certificates/CC-6DQSGKYB">
-            <p>Machine Learning for Beginners
-</p>
-        </a>
-
-        <a class="c" href="https://www.sololearn.com/certificates/CC-2U6XVV1T">
-            <p>LLM</p>
-        </a>
     </section>
 </main>
 
