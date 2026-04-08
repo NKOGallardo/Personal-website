@@ -1,0 +1,98 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(27, 27, 27);
+}
+
+/* ===== Main Content ===== */
+main {
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    animation: glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #444; }
+    to { text-shadow: 0 0 20px #fff; }
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
