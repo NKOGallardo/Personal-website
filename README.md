@@ -16,8 +16,7 @@
 </p>
 
 ---
-
-## 🧠 About Me
+<h1> 🧠 About Me </h1>
 
 ```diff
 + I don't just learn code — I build with it.
