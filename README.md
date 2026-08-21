@@ -1,5 +1,5 @@
 <!-- 🔥 HEADER / HERO -->
-<h1 align="center">🚀 Online for now Portfolio</h1>
+<h1 align="center">🚀 My Portfolio</h1>
 <p align="center">
   <strong>Building Online Possibilities.</strong>
 </p>
