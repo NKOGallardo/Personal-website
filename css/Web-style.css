@@ -542,12 +542,36 @@ header.scrolled {
 }
 
 .achievement-item {
+  display: block;
+  padding: 0;
+  background: var(--bg);
+  transition: background 0.2s;
+  border: none;
+}
+
+.achievement-item summary {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
   padding: 2rem 1.5rem;
-  background: var(--bg);
-  transition: background 0.2s;
+  list-style: none;
+  cursor: pointer;
+}
+
+.achievement-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.achievement-item summary::after {
+  content: '+';
+  margin-left: auto;
+  color: var(--green);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.achievement-item[open] summary::after {
+  content: '−';
 }
 
 .achievement-item:hover { background: var(--bg2); }
@@ -568,6 +592,18 @@ header.scrolled {
 
 .ach-sub a { color: var(--green); transition: opacity 0.2s; }
 .ach-sub a:hover { opacity: 0.7; }
+
+.ach-description {
+  padding: 0 1.5rem 1.6rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+}
+
+.ach-description p {
+  padding-top: 1rem;
+}
 
 /* ══════════════════════════
    BELIEF / QUOTE
