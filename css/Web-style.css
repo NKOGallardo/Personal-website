@@ -21,6 +21,11 @@
   --section-pad: 8rem 6%;
 }
 
+::selection {
+    background: rgba(184,249,89,0.3);
+    color: white;
+}
+
 /* ── Reset ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
