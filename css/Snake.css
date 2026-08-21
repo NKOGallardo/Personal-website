@@ -1,0 +1,35 @@
+:root {
+    --green:    #b8f959;
+    --black:    #000;
+    --black2:     #111111
+}
+
+html,body {
+    height: 100%;
+    margin: 0
+}
+
+body {
+    background: var(--black);
+    font-family: system-ui, Segoe UI, Roboto, Arial
+}
+
+#game {
+    display: block
+}
+
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20
+}
+
+.controls button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    background: var(--green);
+    color: var(--black2);
+    cursor: pointer
+}
