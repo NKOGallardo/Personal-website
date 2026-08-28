@@ -33,3 +33,45 @@ body {
     color: var(--black2);
     cursor: pointer
 }
+
+#mobileControls {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+#mobileControls div {
+  display: flex;
+  gap: 8px;
+}
+
+#mobileControls button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+#mobileControls button:active {
+  transform: scale(0.9);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Show controls on phones */
+@media (max-width: 768px) {
+  #mobileControls {
+    display: flex;
+  }
+}

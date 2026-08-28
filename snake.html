@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Snake — Personal Website</title>
   <link rel="stylesheet" href="css/Snake.css" />
+  <link rel="icon" type="image/png" href="images/Logo.png" />
 </head>
 <body>
     
   <div class="controls"><button id="fsBtn">Enter Fullscreen</button></div>
   <canvas id="game"></canvas>
+  <div id="mobileControls">
+  <button data-dir="up">▲</button>
+
+  <div>
+    <button data-dir="left">◀</button>
+    <button data-dir="down">▼</button>
+    <button data-dir="right">▶</button>
+  </div>
+</div>
 
   <script src="script/snake.js"></script>
 </body>
