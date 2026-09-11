@@ -1,7 +1,7 @@
 <!-- 🔥 HEADER / HERO -->
 <h1 align="center">🚀 My Portfolio</h1>
 <p align="center">
-  <strong>Building Online Possibilities.</strong>
+  <strong>Working hard every day.</strong>
 </p>
 
 <p align="center">
