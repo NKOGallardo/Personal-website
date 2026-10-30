@@ -717,22 +717,6 @@ cite {
 
 .social-link:hover { color: var(--green); border-color: var(--green); }
 
-.build-btn {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 1rem 2.2rem;
-  background: var(--green);
-  color: #000;
-  font-size: 0.72rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 700;
-  width: fit-content;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.build-btn:hover { background: var(--green2); transform: translateY(-2px); }
-
 .tech-cloud {}
 
 .tech-title {
