@@ -168,23 +168,45 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-// ── FORM SUBMIT FEEDBACK ───────────────────
-const form = document.querySelector('.contact-form');
+// ── FORM SUBMIT FEEDBACK ───────────────────const form = document.querySelector('.contact-form');
 
 if (form) {
   const btn = form.querySelector('.btn-submit');
 
-  form.addEventListener('submit', () => {
-    btn.textContent = 'Sending...';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
     btn.disabled = true;
+    btn.textContent = 'Sending...';
 
     setTimeout(() => {
-      btn.textContent = 'Wait...';
+      if (btn.textContent === 'Sending...') {
+        btn.textContent = 'Wait...';
+      }
     }, 1000);
 
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        btn.textContent = 'Boom sent ✓';
+        form.reset();
+      } else {
+        btn.textContent = 'Failed! Try again';
+      }
+    } catch (error) {
+      btn.textContent = 'Failed! Try again';
+    }
+
     setTimeout(() => {
-      btn.textContent = 'Boom sent ✓';
-      form.reset();
+      btn.textContent = 'Send';
+      btn.disabled = false;
     }, 2500);
   });
 }
