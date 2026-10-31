@@ -168,12 +168,23 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-// ── 8. FORM SUBMIT FEEDBACK ───────────────────
+// ── FORM SUBMIT FEEDBACK ───────────────────
 const form = document.querySelector('.contact-form');
+
 if (form) {
+  const btn = form.querySelector('.btn-submit');
+
   form.addEventListener('submit', () => {
-    const btn = form.querySelector('.btn-submit');
     btn.textContent = 'Sending...';
-    btn.style.opacity = '0.7';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.textContent = 'Wait...';
+    }, 1000);
+
+    setTimeout(() => {
+      btn.textContent = 'Boom sent ✓';
+      form.reset();
+    }, 2500);
   });
 }
