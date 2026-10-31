@@ -168,7 +168,8 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-// ── FORM SUBMIT FEEDBACK ───────────────────const form = document.querySelector('.contact-form');
+// ── FORM SUBMIT FEEDBACK ───────────────────
+const form = document.querySelector('.contact-form');
 
 if (form) {
   const btn = form.querySelector('.btn-submit');
