@@ -206,7 +206,7 @@ if (form) {
     }
 
     setTimeout(() => {
-      btn.textContent = 'Send';
+      btn.textContent = 'Send Message ↗';
       btn.disabled = false;
     }, 2500);
   });
