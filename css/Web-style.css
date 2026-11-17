@@ -657,7 +657,7 @@ header.scrolled {
 }
 
 .belief-mark {
-  font-family: var(--font-italic);
+  font-family: sans-serif;
   font-size: 8rem;
   line-height: 0.5;
   color: var(--green);
